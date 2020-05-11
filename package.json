@@ -1,0 +1,58 @@
+{
+  "name": "courtesan",
+  "version": "0.1.1",
+  "description": "Rule like a king, debug like a courtesan - whatever that means",
+  "main": "",
+  "scripts": {
+    "build-content-script": "browserify ./src/content-scripts/content-kuker.js -o ./build/content-courtesan.js -t babelify",
+    "watch-content-script": "watchify ./src/content-scripts/content-kuker.js -o ./build/content-courtesan.js -t babelify -v",
+    "build-kuker-ui": "browserify ./src/kuker-ui/index.js -o ./build/courtesan-ui.js -t babelify",
+    "watch-kuker-ui": "watchify ./src/kuker-ui/index.js -o ./build/courtesan-ui.js -t babelify -v",
+    "build-extension-static": "cpx \"src/extension-static/**/*.*\" build",
+    "watch-extension-static": "cpx \"src/extension-static/**/*.*\" build --watch",
+    "build": "rm -rf ./build/* && git submodule update -f && npm run build-content-script && npm run build-kuker-ui && npm run build-extension-static && rm ./packages/* && node ./scripts/zipExtension.js",
+    "watch": "rm -rf ./build/* && concurrently \"npm run watch-content-script\" \"npm run watch-kuker-ui\" \"npm run watch-extension-static\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brucou/courtesan.git"
+  },
+  "keywords": [
+    "state",
+    "machine",
+    "dev",
+    "tools",
+    "chrome"
+  ],
+  "author": "brucou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brucou/courtesan/issues"
+  },
+  "homepage": "https://github.com/brucou/courtesan",
+  "dependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^7.3.0",
+    "brfs": "^1.4.3",
+    "browserify": "^14.4.0",
+    "circular-json-es6": "^2.0.1",
+    "concurrently": "^3.5.1",
+    "cpx": "^1.5.0",
+    "deep-diff": "^0.3.8",
+    "fs-extra": "^5.0.0",
+    "kingly": "^0.27.0",
+    "kuker-emitters": "6.3.0",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-json-tree": "^0.11.0",
+    "react-virtualized": "^9.13.0",
+    "stent": "4.1.0",
+    "watchify": "^3.9.0",
+    "zip-folder": "^1.0.0"
+  }
+}
