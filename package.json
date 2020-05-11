@@ -1,8 +1,8 @@
 {
   "name": "courtesan",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "description": "Rule like a king, debug like a courtesan - whatever that means",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "build-content-script": "browserify ./src/content-scripts/content-kuker.js -o ./build/content-courtesan.js -t babelify",
     "watch-content-script": "watchify ./src/content-scripts/content-kuker.js -o ./build/content-courtesan.js -t babelify -v",
