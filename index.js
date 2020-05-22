@@ -203,21 +203,8 @@ export function tracer(obj) {
   }
 }
 
-// TODO; maybe don't use indent but use different colour shades? but as to respect contrast
-// TODO: label should be html, or be text and if null, other field should be html
-// TODO: I should be able to filter to remove the intermediate events *init, auto
-// TODO: remove the timing information and put the control state instead
-// TODO: change the event label to sth in [event data, outputs]
-// TODO: put the event tab first and default (state is for debugging) but only if control state is visible in label
-// TODO: investigate an option render web component, so when I ahve a render props in ouputs, I can show the component
+// TODO: I should be able to collapse/expend per event/output couple
+// TODO: investigate an option render web component, so when I have a render props in outputs, I can show the component
 // TODO: and that panel should be cutting horizontally in two the right panel, but will need to import it dynamically...
 // TODO: user can pass address of svg of file (graphml if I feel like generating the svg myself, not impossible but time consuming)
 //       so I can display that. Also animate the text of the cs when clicked on input
-// TODO: also can dynamically import a web component that renders the prop! has to be web component, else how would I know how to render it
-// if component done with svelte then svelte compiles to web component automatically!!
-
-// so publish my own extension with very few additions - just the html label and indent, the tab changing too
-// no, morei mportant is the web component, try that first if fast else do the rest
-// then move to the compiler
-// icons
-// fa-warning, fa-exclamation-triangle, fa-exclamation-circle, fa-exclamation, fa-ban, fa-info-circle, fa-sign-in, fa-info, fa-bug, fa-sign-out
