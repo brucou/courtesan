@@ -4,12 +4,12 @@ This package supports the Kingly state machine library with a tracing extension.
 Kingly developers must first download the [courtesan extension](https://chrome.google.com/webstore/search/courtesan) of the Chrome store. Then, for Kingly to send messages to the dev tool, you will need to create a Kingly state machine as follows:
 
 ```js
-import {tracer} from "Kingly";
+import {tracer} from "courtesan";
       ...
 const fsm = createStateMachine(fsmDef, {debug:{console}, devTool:{tracer}});
 ```
 
-As you can see, the `devTool` parameter admits the `tracer` property. The corresponding tracer object can be imported from the Kingly library.  
+As you can see, the `devTool` parameter admits the `tracer` property whose interface is implemented by the `courtesan` library.
 
 
 # Screenshot

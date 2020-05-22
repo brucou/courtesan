@@ -1,6 +1,6 @@
 {
   "name": "courtesan",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Rule like a king, debug like a courtesan - whatever that means",
   "main": "index.js",
   "scripts": {
