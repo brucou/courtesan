@@ -15,3 +15,6 @@ As you can see, the `devTool` parameter admits the `tracer` property whose inter
 # Screenshot
 
 ![screenshot](https://brucou.github.io/documentation/images/extension/courtesan%200.png)
+
+# Credit
+This dev tool is extensively based on [prior art](https://github.com/krasimir/kuker) from [Krasimir Tsonev](https://krasimirtsonev.com/). Krasimir has a ton of nice software that can be used for fun and profit. He is als the author of the [Stent](https://www.smashingmagazine.com/2018/01/rise-state-machines/) state machine library (designed to integrate smoothly with Redux). 
